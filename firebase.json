@@ -1,0 +1,12 @@
+{
+  "apphosting": {
+    "rewrites": [
+      {
+        "source": "**",
+        "run": {
+          "region": "us-central1"
+        }
+      }
+    ]
+  }
+}

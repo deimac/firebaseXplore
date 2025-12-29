@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.APP_TITLE = exports.APP_LOGO = exports.UNAUTHED_ERR_MSG = exports.NOT_ADMIN_ERR_MSG = exports.AXIOS_TIMEOUT_MS = exports.ONE_YEAR_MS = exports.COOKIE_NAME = void 0;
+exports.COOKIE_NAME = "app_session_id";
+exports.ONE_YEAR_MS = 1000 * 60 * 60 * 24 * 365;
+exports.AXIOS_TIMEOUT_MS = 30000;
+exports.NOT_ADMIN_ERR_MSG = "Acesso negado. Apenas administradores podem realizar esta ação.";
+exports.UNAUTHED_ERR_MSG = "Você precisa estar autenticado para realizar esta ação.";
+exports.APP_LOGO = "/logo.png";
+exports.APP_TITLE = "Xplore Viagens";
