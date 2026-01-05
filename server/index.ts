@@ -1,10 +1,7 @@
 /**
- * Entrypoint for Firebase Functions.
- *
- * This file imports the configured Express app from the '_core' directory
- * and exports it as a Firebase Cloud Function named 'api'.
- * All application logic and server configuration is contained within the _core directory.
+ * Server entrypoint for Firebase App Hosting.
+ * 
+ * This file simply imports and executes the main server configuration from the '_core' directory.
+ * The server in '_core' is responsible for starting and listening for incoming requests.
  */
-import { api } from './_core/index.js';
-
-export { api };
+import './_core/index.js';
