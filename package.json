@@ -7,7 +7,7 @@
     "build:client": "vite build",
     "build:server": "tsc -p server/tsconfig.json",
     "build": "npm run build:client && npm run build:server",
-    "start": "node server/dist/_core/index.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.1",

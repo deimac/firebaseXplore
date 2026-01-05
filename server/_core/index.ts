@@ -9,7 +9,6 @@ import cors from 'cors';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
-import { onRequest } from "firebase-functions/v2/https";
 import { createExpressMiddleware } from "@trpc/server/adapters/express";
 
 import { ENV, validateEnv, logEnvConfig } from './env.js';
@@ -102,5 +101,8 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   });
 });
 
-// Expose the Express app as a Cloud Function named 'api' for Firebase
-export const api = onRequest(app);
+// Start the server for Firebase App Hosting
+const port = process.env.PORT || 8080;
+app.listen(port, () => {
+  console.log(`✅ Server is running on port ${port}`);
+});
