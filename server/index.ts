@@ -1,9 +1,12 @@
 /**
  * Server entrypoint for Firebase App Hosting.
- * 
- * This file simply imports and executes the main server configuration from the '_core' directory.
- * The server in '_core' is responsible for starting and listening for incoming requests.
+ * This file imports the configured Express app from the '_core' directory
+ * and starts the server.
  */
-import './_core/index.js';
+import { app } from './_core/index.js';
 
-// Force rebuild: 2024-05-22
+const port = process.env.PORT || 8080;
+
+app.listen(port, () => {
+  console.log(`✅ Server is running on port ${port}`);
+});
