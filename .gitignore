@@ -1,2 +1,50 @@
+# Builds
+/dist/
+/server/dist/
+
+# Firebase local
+/.firebase/
+
+# Drizzle
+**/*.d.ts
+/drizzle/meta/
+/drizzle/*.sql
+
+# IDX / temporários
+/.idx/
+
+# Backups
+*.bak
+
+# Dependencies
+/node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Environment variables
 .env
-node_modules
+.env.*
+!.env.example
+
+# SQLite databases
+*.sqlite
+*.sqlite-journal
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+hs_err_pid*
+
+# IDEs and editors
+/.idea/
+/.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

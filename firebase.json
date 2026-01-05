@@ -1,12 +1,15 @@
 {
-  "apphosting": {
+  "hosting": {
+    "public": "dist/public",
     "rewrites": [
       {
         "source": "**",
-        "run": {
-          "region": "us-central1"
-        }
+        "function": "api"
       }
     ]
+  },
+  "functions": {
+    "source": "server/dist",
+    "runtime": "nodejs20"
   }
 }

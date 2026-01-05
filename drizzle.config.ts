@@ -5,11 +5,16 @@ if (!connectionString) {
   throw new Error("DATABASE_URL is required to run drizzle commands");
 }
 
+const dbUrl = new URL(connectionString);
+
 export default defineConfig({
   schema: "./drizzle/schema.ts",
   out: "./drizzle",
-  dialect: "mysql",
   dbCredentials: {
-    url: connectionString,
-  },
+    host: dbUrl.hostname,
+    user: dbUrl.username,
+    password: dbUrl.password,
+port: Number(dbUrl.port) || 3306,
+    database: dbUrl.pathname.slice(1),
+  } as any,
 });

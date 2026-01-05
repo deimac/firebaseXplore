@@ -9,13 +9,13 @@ import { Building2, Mail, Phone, MessageCircle, Instagram, Facebook, Linkedin, T
 import AdminLayout from "@/components/AdminLayout";
 
 export default function CompanySettings() {
-  const { data: settings, isLoading, refetch } = trpc.companySettings.get.useQuery();
-  const updateMutation = trpc.companySettings.update.useMutation({
+  const { data: settings, isLoading, refetch } = trpc.company.get.useQuery();
+  const updateMutation = trpc.company.update.useMutation({
     onSuccess: () => {
       toast.success("Configurações atualizadas com sucesso!");
       refetch();
     },
-    onError: (error) => {
+    onError: (error: Error) => {
       toast.error(`Erro ao atualizar: ${error.message}`);
     },
   });
