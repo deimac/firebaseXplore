@@ -5,9 +5,8 @@
   "type": "module",
   "scripts": {
     "build:client": "vite build",
-    "build:server": "tsc server/index.ts --outDir dist --esModuleInterop",
-    "build": "npm run build:client && npm run build:server",
-    "start": "node dist/index.js"
+    "build": "npm run build:client",
+    "start": "tsx server/index.ts"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.1",
@@ -31,7 +30,7 @@
     "mysql2": "^3.10.2",
     "next-themes": "^0.3.0",
     "react": "^18.3.1",
-  "react-dom": "^18.3.1",
+    "react-dom": "^18.3.1",
     "sonner": "^1.5.0",
     "tailwind-merge": "^2.4.0",
     "wouter": "^3.3.1",
