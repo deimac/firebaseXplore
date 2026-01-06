@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build:client": "vite build",
-    "build:server": "tsc server/index.ts --outDir dist",
+    "build:server": "tsc server/index.ts --outDir dist --esModuleInterop",
     "build": "npm run build:client && npm run build:server",
     "start": "node dist/index.js"
   },
