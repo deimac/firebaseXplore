@@ -1,15 +1,9 @@
 {
   "hosting": {
-    "public": "dist/public",
-    "rewrites": [
-      {
-        "source": "**",
-        "function": "api"
-      }
-    ]
-  },
-  "functions": {
-    "source": "server/dist",
-    "runtime": "nodejs20"
+    "source": ".",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "frameworksBackend": {
+      "region": "us-central1"
+    }
   }
 }
